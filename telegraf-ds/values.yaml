@@ -1,0 +1,16 @@
+telegraf-ds:
+  replicaCount: 1
+
+  config:
+    inputs:
+      - kubernetes:
+          url: "https://$HOSTIP:10250"
+          bearer_token: "/var/run/secrets/kubernetes.io/serviceaccount/token"
+          insecure_skip_verify: true
+    outputs:
+      - influxdb_v2:
+          urls:
+            - "http://35.221.115.74"
+          token: "CdR0VFBDO30TVSvG8wqWUO8IEqKFext5gegv7wJqJrU19-0WaY1nUqLgbjP3X3H53H7VRZkxJw13-Z6hj_eCDg=="
+          organization: "goboolean"
+          bucket: "k8s"

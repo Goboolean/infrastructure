@@ -1,0 +1,9 @@
+apiVersion: v2
+name: influxddata
+version: 0.1.0
+description: A Helm chart for influxdata stack
+
+dependencies:
+  - name: telegraf-ds
+    version: "1.1.32"
+    repository: "https://helm.influxdata.com"
