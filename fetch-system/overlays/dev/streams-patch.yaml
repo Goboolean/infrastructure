@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fetch-system-streams
+  annotations:
+    avp.kubernetes.io/path: "kv-v2/data/application/fetch-system/streams"
 spec:
   replicas: 1
   template:
@@ -14,8 +16,8 @@ spec:
           imagePullPolicy: Always
           env:
             - name: KAFKA_BOOTSTRAP_HOST
-              value: "fetch-system-kafka:9092"
+              value: <KAFKA_BOOTSTRAP_HOST>
             - name: ETCD_HOST
-              value: "fetch-system-etcd:2379"
+              value: <ETCD_HOST>
             - name: OTEL_ENDPOINT
-              value: "fetch-system-opentelemetry-collector:4317"
+              value: <OTEL_ENDPOINT>
