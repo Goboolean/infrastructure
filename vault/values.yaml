@@ -17,7 +17,9 @@ vault:
       path: "/v1/sys/health?standbyok=true&sealedcode=204&uninitcode=204"
     livenessProbe:
       enabled: true
-      path: "/v1/sys/health?standbyok=true"
+      # Even in seal mode, liveness is successful.
+      # After applying Auto-unseal mode, be sure to remove sealedcode=204.
+      path: "/v1/sys/health?standbyok=true&sealedcode=204"
       initialDelaySeconds: 60
 
     # This configures the Vault Statefulset to create a PVC for audit logs.
