@@ -1,0 +1,9 @@
+apiVersion: v2
+name: kapacitor
+version: 0.1.0
+description: A Helm chart for kapacitor
+
+dependencies:
+  - name: kapacitor
+    version: "1.4.7"
+    repository: "https://helm.influxdata.com"

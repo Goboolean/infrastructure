@@ -1,0 +1,4 @@
+kapacitor:
+  service:
+    type: ClusterIP
+  influxURL: influxdata-influxdb2.influxdata.svc.cluster.local
