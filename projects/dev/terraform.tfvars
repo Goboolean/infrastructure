@@ -1,3 +1,3 @@
-project_id = "goboolean-436921"
+project_id = "goboolean-dev"
 region     = "asia-northeast3"
 zone       = "asia-northeast3-a"

@@ -10,3 +10,8 @@ module "gke" {
     region = var.region
     zone = var.zone
 }
+
+module "harbor" {
+    source = "../../modules/infra/harbor"
+    depends_on = [module.gke]
+}

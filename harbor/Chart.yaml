@@ -1,9 +1,0 @@
-apiVersion: v2
-name: harbor
-version: 0.1.0
-description: A Helm chart for Harbor
-
-dependencies:
-  - name: harbor
-    version: "1.15.0"
-    repository: "https://helm.goharbor.io"
